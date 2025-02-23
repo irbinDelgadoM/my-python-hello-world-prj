@@ -1,9 +1,4 @@
 pipeline {
-    agent { 
-        node {
-            label 'docker-agent-python'
-            }
-      }
     triggers {
         pollSCM '* * * * *'
     }
@@ -23,7 +18,7 @@ pipeline {
                 sh '''
                 cd myapp
                 python3 hello.py
-                python3 hello.py --name=Brad
+                python3 hello.py --name=Irbin
                 '''
             }
         }
