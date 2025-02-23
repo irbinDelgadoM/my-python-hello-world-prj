@@ -14,8 +14,8 @@ pipeline {
                 sh '''
                 cd myapp
                 python3 -m venv venv
-                bash -c "source venv/bin/activate && echo 'Virtual environment activated!'"
-                pip install -r requirements.txt
+                . venv/bin/activate
+                pip3 install -r requirements.txt
                 '''
             }
         }
